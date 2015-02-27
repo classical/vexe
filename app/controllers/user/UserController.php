@@ -130,7 +130,7 @@ class UserController extends BaseController {
     {
         $user = Auth::user();
         if(!empty($user->id)){
-            return Redirect::to('/');
+            return Redirect::to('admin');
         }
 
         return View::make('site/user/login');
