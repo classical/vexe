@@ -8,16 +8,16 @@ class PermissionsTableSeeder extends Seeder {
 
         $permissions = array(
             array( // 1
-                'name'         => 'manage_blogs',
-                'display_name' => 'manage blogs'
+                'name'         => 'manage_reports',
+                'display_name' => 'manage reports'
             ),
             array( // 2
-                'name'         => 'manage_posts',
-                'display_name' => 'manage posts'
+                'name'         => 'manage_nhaxe',
+                'display_name' => 'manage nhaxe'
             ),
             array( // 3
-                'name'         => 'manage_comments',
-                'display_name' => 'manage comments'
+                'name'         => 'manage_managers',
+                'display_name' => 'manage managers'
             ),
             array( // 4
                 'name'         => 'manage_users',

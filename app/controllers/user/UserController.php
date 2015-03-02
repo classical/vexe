@@ -7,6 +7,7 @@ class UserController extends BaseController {
      * @var User
      */
     protected $user;
+    protected $role;
 
     /**
      * @var UserRepository
@@ -18,10 +19,11 @@ class UserController extends BaseController {
      * @param User $user
      * @param UserRepository $userRepo
      */
-    public function __construct(User $user, UserRepository $userRepo)
+    public function __construct(User $user, UserRepository $userRepo, AssignedRoles $role)
     {
         parent::__construct();
         $this->user = $user;
+        $this->role = $role;
         $this->userRepo = $userRepo;
     }
 
@@ -129,7 +131,12 @@ class UserController extends BaseController {
     public function getLogin()
     {
         $user = Auth::user();
+
         if(!empty($user->id)){
+            $role_id = $this->role->getRoleId($user->id);
+            if($role_id->role_id == 2){
+                return Redirect::to('user');
+            }
             return Redirect::to('admin');
         }
 
@@ -257,7 +264,7 @@ class UserController extends BaseController {
     {
         Confide::logout();
 
-        return Redirect::to('/');
+        return Redirect::to('user/login');
     }
 
     /**

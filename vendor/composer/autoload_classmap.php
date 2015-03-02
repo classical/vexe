@@ -7,8 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Acme\\Composers\\CommentComposer' => $baseDir . '/app/Acme/Composers/CommentComposer.php',
-    'AdminBlogsController' => $baseDir . '/app/controllers/admin/AdminBlogsController.php',
-    'AdminCommentsController' => $baseDir . '/app/controllers/admin/AdminCommentsController.php',
+    'AdminReportsController' => $baseDir . '/app/controllers/admin/AdminReportsController.php',
+    'AdminManagersController' => $baseDir . '/app/controllers/admin/AdminManagersController.php',
     'AdminController' => $baseDir . '/app/controllers/AdminController.php',
     'AdminDashboardController' => $baseDir . '/app/controllers/admin/AdminDashboardController.php',
     'AdminRolesController' => $baseDir . '/app/controllers/admin/AdminRolesController.php',
@@ -50,9 +50,9 @@ return array(
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
     'Comment' => $baseDir . '/app/models/Comment.php',
-    'CommentsTableSeeder' => $baseDir . '/app/database/seeds/CommentsTableSeeder.php',
+    'ManagersTableSeeder' => $baseDir . '/app/database/seeds/ManagersTableSeeder.php',
     'ConfideSetupUsersTable' => $baseDir . '/app/database/migrations/2013_02_05_024934_confide_setup_users_table.php',
-    'CreateCommentsTable' => $baseDir . '/app/database/migrations/2013_02_05_044505_create_comments_table.php',
+    'CreateManagersTable' => $baseDir . '/app/database/migrations/2013_02_05_044505_create_comments_table.php',
     'CreatePostsTable' => $baseDir . '/app/database/migrations/2013_02_05_043505_create_posts_table.php',
     'Crypt_AES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
     'Crypt_Base' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Base.php',
